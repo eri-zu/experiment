@@ -4,16 +4,27 @@
 @use "components/**";
 @use "pages/**";
 
+:root {
+  --color-black: #000;
+  --color-white: #fff;
+  --color-gray: #ccc;
+  --font-size: 10px;
+  --font-en: "Big Shoulders";
+}
+
 html {
-  background: #000;
+  font-family: var(--font-en), sans-serif;
+  font-size: var(--font-size);
+  background-color: var(--color-black);
+  color: var(--color-white);
+  touch-action: none;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  grid-row-end: 100%;
-  font-size: 10px;
+  height: 100%;
+}
 
-  overflow: hidden;
-  overscroll-behavior: none;
-  touch-action: none;
+body {
+  height: 100%;
 }

@@ -12,14 +12,14 @@
     "ejs": "^3.1.9",
     "fs": "^0.0.1-security",
     "sass": "^1.62.1",
-    "three": "^0.155.0",
+    "tweakpane": "^4.0.5",
     "vite": "^4.3.0"
   },
   "dependencies": {
     "directory-crawler": "^0.0.6",
     "gsap": "^3.12.7",
     "randomstring": "^1.2.3",
-    "tweakpane": "^4.0.5",
+    "three": "^0.177.0",
     "ua-parser-js": "^2.0.3",
     "vite-plugin-ejs": "^1.6.4",
     "vite-plugin-glsl": "^1.1.2",

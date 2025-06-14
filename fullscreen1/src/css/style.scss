@@ -4,8 +4,19 @@
 @use "components/**";
 @use "pages/**";
 
+:root {
+  --color-black: #000;
+  --color-white: #fff;
+  --color-gray: #ccc;
+  --font-size: 10px;
+  --font-en: "Big Shoulders";
+}
+
 html {
-  font-size: 10px;
+  font-family: var(--font-en), sans-serif;
+  font-size: var(--font-size);
+  background-color: var(--color-white);
+  color: var(--color-black);
   touch-action: none;
   position: fixed;
   top: 0;
@@ -15,5 +26,5 @@ html {
 }
 
 body {
-  background-color: #fff;
+  height: 100%;
 }
