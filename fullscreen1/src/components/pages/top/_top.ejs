@@ -1,0 +1,28 @@
+<div class="canvaswrap"><canvas id="webgl"></canvas></div>
+
+<div class="titleArea">
+  <h1 class="title js-title">Fullscreen Animation</h1>
+</div>
+
+<div class="close js-close">
+  <div class="closeBar">
+    <div class="closeBarIn js-close_bar"></div>
+  </div>
+  <div class="closeBar">
+    <div class="closeBarIn js-close_bar"></div>
+  </div>
+</div>
+
+<div class="area">
+  <ul class="imgList">
+    <% for(let i = 0; i < 9; i ++) { %>
+    <li class="imgItem">
+      <img
+        src="/assets/img/<%= i + 1 %>.webp"
+        alt="Fullscreen Animation<% i + 1%>"
+        class="js-img"
+      />
+    </li>
+    <% } %>
+  </ul>
+</div>

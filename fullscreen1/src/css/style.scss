@@ -1,0 +1,19 @@
+@use "reset";
+@use "utils";
+@use "common/**";
+@use "components/**";
+@use "pages/**";
+
+html {
+  font-size: 10px;
+  touch-action: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #fff;
+}
