@@ -1,0 +1,19 @@
+@use "reset";
+@use "utils";
+@use "common/**";
+@use "components/**";
+@use "pages/**";
+
+html {
+  background: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  grid-row-end: 100%;
+  font-size: 10px;
+
+  overflow: hidden;
+  overscroll-behavior: none;
+  touch-action: none;
+}
