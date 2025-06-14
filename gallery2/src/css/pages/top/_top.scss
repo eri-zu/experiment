@@ -13,9 +13,20 @@
   }
 }
 
+.titleArea {
+  position: fixed;
+  top: 3rem;
+  left: 3rem;
+
+  @include media-max("sp") {
+    left: 2rem;
+    top: 2rem;
+  }
+}
+
 .title {
-  font-family: $en;
   font-weight: 400;
+  color: #fff;
   font-size: 2.4rem;
   line-height: 1;
 
@@ -24,15 +35,14 @@
   }
 }
 
-.titleArea {
+.text {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  font-family: Arial, Helvetica, sans-serif;
   color: #fff;
-  mix-blend-mode: difference;
-  position: fixed;
-  top: 3rem;
-  left: 3rem;
+  font-weight: 400;
 
   @include media-max("sp") {
-    top: 1.5rem;
-    left: 1.5rem;
+    font-size: 1.2rem;
   }
 }
