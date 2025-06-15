@@ -42,17 +42,13 @@ export class Gl {
     const loader = new THREE.TextureLoader();
     const ps = [];
 
-    for (let i = 0; i < 2; i++) {
-      const p = new Promise((resolve) => {
-        const texture = loader.load(`./assets/img/${i + 1}.jpg`, () => {
-          resolve(texture);
-        });
+    const p = new Promise((resolve) => {
+      const texture = loader.load(`./assets/img/2.jpg`, () => {
+        resolve(texture);
       });
+    });
 
-      ps.push(p);
-    }
-
-    return Promise.all(ps);
+    return p;
   }
 
   onMouseMove(mouseX, mouseY) {

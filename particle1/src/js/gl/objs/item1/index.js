@@ -3,8 +3,7 @@ import frag from "./shader/main.frag";
 import * as THREE from "three";
 
 export class Item1 {
-  constructor(textures, group, camera) {
-    this.textures = textures;
+  constructor(group, camera) {
     this.group = group;
     this.camera = camera;
 
@@ -58,7 +57,7 @@ export class Item1 {
 
     this.ctx = this.mouseCanvas.getContext("2d");
     this.glow = new Image();
-    this.glow.src = "/assets/img/glow.png";
+    this.glow.src = "./assets/img/glow.png";
 
     this.canvasTexture = new THREE.CanvasTexture(this.mouseCanvas);
   }
@@ -309,6 +308,6 @@ export class Item1 {
       this.getImageData(image);
     });
 
-    image.src = "/assets/img/1.jpg";
+    image.src = "./assets/img/1.jpg";
   }
 }

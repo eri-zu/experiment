@@ -17,7 +17,7 @@ export class Objs {
 
     this.itemArray = [];
 
-    const item1 = new Item1(this.texture, group, this.camera);
+    const item1 = new Item1(group, this.camera);
     const item2 = new Item2(this.texture, group, this.camera);
     this.itemArray.push(item1, item2);
     // this.itemArray.push(item1);

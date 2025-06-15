@@ -3,8 +3,8 @@ import frag from "./shader/main.frag";
 import * as THREE from "three";
 
 export class Item2 {
-  constructor(textures, group, camera) {
-    this.textures = textures;
+  constructor(texture, group, camera) {
+    this.texture = texture;
     this.group = group;
     this.camera = camera;
 
@@ -58,7 +58,7 @@ export class Item2 {
 
     this.ctx = this.mouseCanvas.getContext("2d");
     this.glow = new Image();
-    this.glow.src = "/assets/img/glow.png";
+    this.glow.src = "./assets/img/glow.png";
 
     this.canvasTexture = new THREE.CanvasTexture(this.mouseCanvas);
   }
@@ -119,7 +119,7 @@ export class Item2 {
       fragmentShader: frag,
       uniforms: {
         // uTime: { value: 0 },
-        uTexture: { value: this.textures[1] },
+        uTexture: { value: this.texture },
         uMouseTexture: { value: this.canvasTexture },
         uPointSize: { value: this.PARAM.pointSize },
       },
@@ -179,7 +179,7 @@ export class Item2 {
         this.PARAM.glowH
       );
 
-      // textures 更新
+      // texture 更新
       this.canvasTexture.needsUpdate = true;
     }
   }
