@@ -1,0 +1,30 @@
+@use "reset";
+@use "utils";
+@use "common/**";
+@use "components/**";
+@use "pages/**";
+
+:root {
+  --color-black: #000;
+  --color-white: #fff;
+  --color-gray: #ccc;
+  --font-size: 10px;
+  --font-en: "Big Shoulders";
+}
+
+html {
+  font-family: var(--font-en), sans-serif;
+  font-size: var(--font-size);
+  background-color: var(--color-black);
+  color: var(--color-white);
+  touch-action: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}

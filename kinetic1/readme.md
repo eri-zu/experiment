@@ -1,12 +1,12 @@
-# Hologram
+# Kinetic typography
 
 ## 🔗 URL
 
-https://eri-zu.github.io/experiment/hologram1/dist/
+https://eri-zu.github.io/experiment/kinetic1/dist/
 
 ## 📚 Reference
 
-https://threejs-journey.com/
+https://tympanus.net/codrops/2020/06/02/kinetic-typography-with-three-js/
 
 ## 🚀 Getting Started
 
