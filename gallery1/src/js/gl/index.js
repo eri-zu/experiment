@@ -44,7 +44,7 @@ export class Gl {
 
     for (let i = 0; i < 10; i++) {
       const p = new Promise((resolve) => {
-        const texture = loader.load(`/assets/img/${i + 1}.jpg`, () => {
+        const texture = loader.load(`./assets/img/${i + 1}.jpg`, () => {
           resolve(texture);
         });
       });
