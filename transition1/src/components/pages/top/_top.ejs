@@ -1,0 +1,47 @@
+<% const data = [
+  {
+    title: "Fade from left bottom",
+  },
+  {
+    title: "Circle mask",
+  },
+  {
+    title: "Circle mask width noise",
+  },
+  {
+    title: "Circle distortion",
+  },
+  {
+    title: "Simple distortion",
+  },
+  {
+    title: "Distortion width delay 1",
+  },
+  {
+    title: "Distort width delay 2",
+  },
+  {
+    title: "Distort width delay 3",
+  },
+]; %>
+
+<div class="canvaswrap"><canvas id="webgl"></canvas></div>
+
+<div class="titleArea">
+  <h1 class="title">Transition pattern experiment</h1>
+</div>
+
+<ul class="list">
+  <% for(let i = 0; i < data.length; i ++) { %>
+    <li class="item js-item">
+      <p class="itemTitle">
+        <%= i + 1 %>. <%= data[i].title %>
+      </p>
+      <div class="imgArea">
+        <div class="imgBtn -prev js-btn"></div>
+        <div class="target js-target"></div>
+        <div class="imgBtn -next js-btn"></div>
+      </div>
+    </li>
+  <% } %>
+</ul>

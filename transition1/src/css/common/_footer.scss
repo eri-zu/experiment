@@ -1,0 +1,14 @@
+@use "../import" as *;
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.footerTxt {
+  text-align: center;
+  font-size: 1rem;
+  font-family: $en;
+}

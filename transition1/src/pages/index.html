@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="jp">
+  <head>
+    <%-include(compPath+'/common/_meta.ejs')%>
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
+    <%-include(compPath+'/common/_font.ejs')%>
+    <%-include(compPath+'/common/_css.ejs')%>
+    <%-include(compPath+'/common/_script.ejs')%>
+  </head>
+  <body>
+    <div class="wrapper">
+      <%-include(compPath+'/_header.ejs');%>
+      <%-include(compPath+'/pages/top/_top.ejs');%>
+      <%-include(compPath+'/_footer.ejs');%>
+    </div>
+  </body>
+</html>

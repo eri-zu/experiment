@@ -1,0 +1,97 @@
+import { Renderer } from "./renderer";
+import { Camera } from "./perspectiveCamera";
+import { Objs } from "./objs";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+import * as THREE from "three";
+
+export class Gl {
+  constructor(wrap) {
+    this.wrap = wrap;
+    this.wrapW = this.wrap.clientWidth;
+    this.wrapH = this.wrap.clientHeight;
+
+    this.setup();
+  }
+
+  setParam() {
+    this.clock = new THREE.Clock();
+    this.prevTime = Date.now();
+    this.timeDelta = 0;
+    this.time = 0;
+
+    this.isLoaded = false;
+    this.isHelper = false;
+    this.isControl = false;
+  }
+
+  async setup() {
+    this.setParam();
+    const textures = await this.load();
+    this.isLoaded = true;
+
+    this.canvas = this.wrap.querySelector("canvas");
+    this.renderer = new Renderer(this.canvas, this.wrapW, this.wrapH);
+    this.camera = new Camera(this.wrapW, this.wrapH);
+    this.scene = new THREE.Scene();
+    this.objs = new Objs(textures, this.scene);
+
+    this.setUtility();
+  }
+
+  async load() {
+    const loader = new THREE.TextureLoader();
+
+    const ps = [];
+
+    for (let i = 0; i < 4; i++) {
+      const p = new Promise((resolve) => {
+        const texture = loader.load(`./assets/img/${i + 1}.jpg`, () => {
+          resolve(texture);
+        });
+      });
+
+      ps.push(p);
+    }
+
+    return Promise.all(ps);
+  }
+
+  onUpdate() {
+    if (this.isLoaded) {
+      const now = Date.now();
+      this.timeDelta = (now - this.prevTime) / 1000; //  フレームごとの経過時間
+      // this.timeDelta = this.clock.getDelta(); // フレームごとの経過時間
+      this.time += this.timeDelta; // 経過時間
+
+      if (this.controls) this.controls.update();
+      this.objs.onUpdate(this.timeDelta, this.time);
+
+      this.renderer.instance.render(this.scene, this.camera.instance);
+
+      this.prevTime = now;
+    }
+  }
+
+  onResize() {
+    const w = this.wrap.clientWidth;
+    const h = this.wrap.clientHeight;
+
+    this.camera.onResize(w, h);
+    this.objs.onResize(w, h);
+    this.renderer.onResize(w, h);
+  }
+
+  setUtility() {
+    // helper
+    if (this.isHelper) {
+      const axesBarLength = 600.0;
+      this.axesHelper = new THREE.AxesHelper(axesBarLength);
+      this.scene.add(this.axesHelper);
+    }
+
+    // orbit control
+    if (this.isControl) {
+      this.controls = new OrbitControls(this.camera.instance, this.canvas);
+    }
+  }
+}
