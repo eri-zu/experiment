@@ -10,7 +10,7 @@ Infinite image gallery demo with RGB shift and curving effect
 
 https://eri-zu.github.io/experiment/gallery2/dist/
 
-## 📚 Inspired by
+## 🌟 Visually Inspired By
 
 - https://eri-zu.github.io/experiment/gallery2/dist/assets/video/demo.mp4
 

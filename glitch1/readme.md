@@ -22,7 +22,7 @@ https://eri-zu.github.io/experiment/glitch1/dist/
 
 - https://youtu.be/zyRCDYmO1VQ?si=IlfhXENVCHlCQq_n
 
-## 📚 Visually Inspired By
+## 🌟 Visually Inspired By
 
 - https://ykob.github.io/sketch-threejs/sketch/glitch.html
 

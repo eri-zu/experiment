@@ -4,20 +4,20 @@
 
 A fullscreen animation demo built with Three.js and glsl.
 
-## 🧠Study Note
+## 🧠 Study Note
 
 - 累乗：カーブに使われるイメージ  
   https://gyazo.com/1639696892f222cdbcf41865900c73db
 
-## 🔗URL
+## 🔗 URL
 
 https://eri-zu.github.io/experiment/gallery1/dist/
 
-## 📚Reference
+## 📚 Reference
 
 - https://www.youtube.com/shorts/Ty7j_v4t7ks
 
-## 🚀Getting Started
+## 🚀 Getting Started
 
 ### Requirements
 
